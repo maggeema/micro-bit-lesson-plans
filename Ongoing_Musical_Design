@@ -1,0 +1,39 @@
+# Ongoing Musical Design
+
+## Step 1: Introduction 
+Goal: The design and the music must be on forever!
+
+First, drag the ``||Basic:show icon||`` block into your ``||Basic: on start||`` block. 
+
+
+
+## Step 2: Test out the songs!
+Scroll through the music catergory and drag in the ``||Music:play melody dadadum in background||``.
+
+You can change the song by clicking on ``||Music:melody dadadum||`` dropdown menu and choosing the song of your choice.
+
+To test out if it is a song that you will like, try it out by clicking the start/stop simulator button underneath the console. 
+
+
+## Step 3: Troubleshoot!
+The design is still lit, but the music is played once and stops. We want it to play forever!
+
+Let's see if moving everything to the forever block helps. Drag the ``||Basic:show icon||``  block to move everything over to the forever block.
+
+Test your code! What is happening now?
+
+## Step 4: Solve the problem!
+Explore other options! 
+Maybe you can move something to ``||Basic:on start||`` instead? 
+
+Perhaps you need to switch the order of the two blocks?
+
+Are there any other dropdown menus in our blocks that will help you solve the problem?
+
+ 
+## Step 5: Design challenge
+Yay! The problem is fixed! 
+
+Replace the ``||Basic:show icon||`` with the ``||Basic:show string||`` block. 
+
+How can we have both the words and the music go on forever?
