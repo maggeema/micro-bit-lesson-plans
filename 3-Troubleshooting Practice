@@ -1,0 +1,39 @@
+
+
+# Troubleshooting Practice
+
+## Debug the code!
+We designed this code for you, but it isn't working correctly! 
+
+The sad sound is played when the wrong button is pressed, BUT the happy sound is not playing even when the correct button is pressed.
+
+How can we fix this code?
+
+Hint: You will not need to add any blocks. Try rearranging or removing blocks! If need to undo something you changed, press the left arrow near the bottom right of the page. 
+```template
+let num = 0
+input.onButtonPressed(Button.A, function () {
+    if (num % 2 == 0) {
+        if (input.buttonIsPressed(Button.A)) {
+            music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.InBackground)
+        }
+    } else {
+        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.InBackground)
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    if (num % 2 == 1) {
+        if (input.buttonIsPressed(Button.B)) {
+            music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.InBackground)
+        }
+    } else {
+        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.InBackground)
+    }
+})
+basic.forever(function () {
+    num = randint(0, 9)
+    basic.showNumber(num)
+    basic.pause(1000)
+})
+
+```
