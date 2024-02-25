@@ -1,0 +1,109 @@
+# Happy and Sad
+
+## Beginner Activity
+Let's review! Peppa created this code and wanted the smiley face to flash forever.
+
+How can we debug this for Peppa?
+
+```template
+basic.forever(function () {
+    basic.showIcon(IconNames.Happy)
+})
+```
+```blocks
+basic.forever(function () {
+    basic.showIcon(IconNames.Happy)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+})
+```
+
+## Intermediate Activity
+Peppa now wants the code to have the smiley face to flash 5 times, then for a sad face to flash 5 times.
+
+How can we help Peppa change his code to do that?
+
+```blocks
+for (let index = 0; index < 5; index++) {
+    basic.showIcon(IconNames.Happy)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+}
+for (let index = 0; index < 5; index++) {
+    basic.showIcon(IconNames.Sad)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+}
+```
+## Advanced Activity
+Peppa thinks it would be more interesting to have it flash in a cooler pattern. 
+
+How can we debug the code to print the smiley and frowning face in an alternating pattern 5 times each?
+
+Hint: It should display the smiley face, then the frowning face, then the smiley face again, and the frowning face... This pattern should still be able to print the smiley face 5 times and the frowning face 5 times. 
+
+```blocks
+for (let index = 0; index < 5; index++) {
+    basic.showIcon(IconNames.Happy)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showIcon(IconNames.Sad)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+}
+```
+
+## Design Challenge Activity
+Peppa wants to change the code. When the micro:bit is in light, it will keep displaying a smiley face. When the micro:bit is in the dark, it will keep displaying a frowning face. 
+
+Hint: Assume that "in the light" means a light level of over 100. To test the light level, you can adjust the yellow region in the circle on the top left of the simulator.
+
+
+```blocks
+basic.forever(function () {
+    if (input.lightLevel() > 100) {
+        basic.showIcon(IconNames.Happy)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else {
+        basic.showIcon(IconNames.Sad)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
+})
+```
